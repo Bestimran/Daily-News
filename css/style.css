@@ -4,15 +4,27 @@
     box-sizing: border-box;
 }
 
-ul{
+.style{
     margin-left: 800px;
 }
-ul a{
+.style a{
     margin: 20px;
 }
+ul{
+    list-style: none;
 
+}
+
+.pen{
+    text-decoration: none;
+    color: black;
+}
 .navbar-text img{
     width: 40%;
     border-radius: 80%;
 
 }
+/* .container ul {
+    margin-right:500px;
+
+} */
