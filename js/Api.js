@@ -29,23 +29,48 @@ displayCatagories = Categories =>{
  }
 
  const displayId = (datas) =>{
-        console.log(datas);
+        // console.log(datas);
         const newsCards = document.getElementById('news-cards');
         newsCards.innerHTML = '';
         // console.log(newsCards);
         datas.forEach(data =>{
+          console.log(data);
           const newsDiv = document.createElement('div');
           // console.log(newsDiv);
-          newsDiv.classList.add('row', 'mb-3');
+          newsDiv.classList.add('row');
           newsDiv.innerHTML = `
           <div class="col-md-4">
-          <img src="${data.thumbnail_url}" class="img-fluid rounded-start w-100" alt="...">
+          <img src="${data.thumbnail_url}"class=" rounded-start w-100 h-75" alt="...">
           </div>
           <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title">${data.title}</h5>
+            <p class="card-text">${data.details}</p>
+            <div class="main d-flex justify-content-between">
+            <div class="author d-flex gap-3">
+              <div class="img">
+              <img src="${data.author.img}" class="">
+              </div>
+              <div class="author-details">
+              <p>${data.author.name}</p>
+              <p>${data.author.published_date}</p>
+              </div>
+            </div>
+            <div class="view">
+             <p>${data.total_view}k</p>
+            </div>
+            <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            
+            </div>
+            <div class="arrow-icon">
+            <i class="fa-solid fa-arrow-right"></i>
+            </div>
+           </div>
           </div>
         </div>
 
