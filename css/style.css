@@ -15,9 +15,15 @@ ul{
 
 }
 
-.pen{
+.category{
     text-decoration: none;
-    color: black;
+    color:black;
+    font-size: 20px;
+    background-color:tomato;
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+
 }
 .navbar-text img{
     width: 40%;
