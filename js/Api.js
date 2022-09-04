@@ -36,6 +36,7 @@ displayCatagories = Categories =>{
         datas.forEach(data =>{
           console.log(data);
           const newsDiv = document.createElement('div');
+          
           // console.log(newsDiv);
           newsDiv.classList.add('row');
           newsDiv.innerHTML = `
@@ -45,7 +46,7 @@ displayCatagories = Categories =>{
           <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">${data.title}</h5>
-            <p class="card-text">${data.details}</p>
+            <p class="card-text">${data.details.slice(0, 400)}</p>
             <div class="main d-flex justify-content-between">
             <div class="author d-flex gap-3">
               <div class="img">
@@ -65,7 +66,6 @@ displayCatagories = Categories =>{
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
-            
             </div>
             <div class="arrow-icon">
             <i class="fa-solid fa-arrow-right"></i>
